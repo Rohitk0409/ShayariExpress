@@ -1,0 +1,140 @@
+
+<%- layout('/layouts/boiyelercode.ejs') %>
+<styl>
+  <style>
+    body{
+      background-color: rgb(226, 235, 243);
+      height:100%;
+    }
+    .logo1{
+      font-weight: bolder;
+       color:rgb(229, 104, 59);
+    }
+    .logo2{
+      font-weight: bolder;
+      color: black;
+   
+    }
+    .fa-solid{
+      color:rgb(229, 104, 59);
+    }
+    main{
+      width:100%;
+      height:100%;
+      
+    }
+   
+    .make{
+      padding-top:1rem;
+    }
+    .tag{
+      letter-spacing:0.4rem;
+    }
+    a{
+      text-decoration: none !important;
+    }
+    .main{
+      width:85%;
+      margin-top:4rem !important;
+      margin: auto;
+      color: black;
+    }
+    h6{
+      color: rgb(229, 104, 59);
+    }
+    .box{
+      width:70%;
+      margin:auto;
+      background-color: white;
+      margin-bottom:1rem;
+      border-radius:10px;
+      box-shadow:0 0 7px black;
+      padding:1rem;
+    }
+    .option{
+      
+    }
+    .icon2{
+      margin-right:0.5rem;
+    }
+  .more{
+    font-size: x-large !important;
+    font-weight: bold;
+   
+  }
+  .trending{
+    font-size: xx-large;
+    letter-spacing:0.2px;
+    font-size: 3rem;
+  }
+  .cots{
+    width:80%;
+    margin: auto;
+    margin-top: 4rem !important;
+    margin-bottom:2rem;
+  }
+  .choice{
+    padding-top:1rem;
+   
+  }
+  .cotegary{
+    width:90%;
+    margin: auto;
+     display: flex;
+     flex-wrap: wrap;
+  }
+  .cot{
+    min-width:4rem;
+    text-align: center;
+    background-color:rgb(239, 138, 102);
+    letter-spacing:0.4px;
+    margin-right: 4px;
+    padding:0.4rem;
+    padding-left:5px;
+    padding-right:5px;
+    border-radius:3px;
+    margin-bottom:0.3rem;
+
+  }
+  :hover.cot{
+    background-color:black;
+    color: white !important;
+  }
+  </style>
+<main class="main">
+  <div class="cots">
+    <div class="mb-2 choice">
+      <h4><b><i class="fa-solid fa-volume-high"></i></i> &nbsp;Explore Your Choice !</b></h4>
+    </div>
+    <di class="cotegary">
+     <a href="/alone"><div class="cot">Alone</div></a>
+     <a href="/sad"><div class="cot">Sad</div></a>
+     <a href="/love"><div class="cot">Love</div></a>
+     <a href="/broken"><div class="cot">Broken</div></a>
+     <a href="/life"><div class="cot">Life</div></a>
+     <a href="/wishes"><div class="cot">Wishes</div></a>
+     <a href="/emotional"><div class="cot">Emotional</div></a>
+     <a href="/motivation"><div class="cot">Motivation</div></a>
+     <a href="/romantic"><div class="cot">Romantic</div></a>
+     <a href="/festival"><div class="cot">Festival</div></a>
+     <a href="/special"><div class="cot">Special</div></a>
+  </div>
+  <div class="mt-2" aria-colcount="trending">
+    <h4 class="mb-4"><b><i class="fa-solid fa-fire"></i>&nbsp; Sad Shayari</b></h4></div>
+  </div>
+  <%for(var d of data) { %>
+        <div class="box">
+   <h6><b><i class="fa-solid fa-pen"></i>&nbsp;<%=d.title %></b></h6>
+   <p><%= d.content %></p>
+ <div class="option">
+    <i class="fa-regular fa-heart icon2"></i>
+    <i class="fa-solid fa-share icon2"></i>
+    <i class="fa-solid fa-download icon2"></i>
+  </div>
+  </div>
+      <%} %>
+    
+</main>
+
+  
+  
